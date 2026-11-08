@@ -1,0 +1,10 @@
+/* Additions for the React deck — colours come from ../../css/tokens.css only */
+/* .reveal sizes itself to 100% of its parent: let the React root fill the viewport like <body> does */
+#root { height: 100%; }
+.score { font-size: .55em; font-weight: 400; color: var(--orange-grey-dark); margin-left: .4em; white-space: nowrap; }
+.score b { color: var(--orange-accessible); }
+.axis-list .score { font-size: .8em; }
+.chip { display: inline-block; border: 2px solid var(--orange-brand); padding: 0 8px; margin-left: 4px; font-size: .6em; font-weight: 700; color: var(--orange-black); vertical-align: middle; white-space: nowrap; }
+.card .chip { font-size: .75em; }
+.axis-slide .tag { background: var(--axis-color); }
+.axis-slide .muted { margin: .3em 0 0; }

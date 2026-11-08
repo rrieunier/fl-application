@@ -1,0 +1,49 @@
+/* Orange Business theme for reveal.js — colours come from tokens.css only */
+.reveal { font-family: var(--orange-font); font-size: 30px; color: var(--orange-black); }
+.reveal .slides section { text-align: left; }
+.reveal h1, .reveal h2, .reveal h3 { font-family: var(--orange-font); font-weight: 700; text-transform: none; color: var(--orange-black); letter-spacing: -.01em; }
+.reveal h2 { font-size: 1.65em; margin: 0 0 .5em; }
+.reveal ul { display: block; margin-left: 1em; }
+.reveal li { margin: .35em 0; }
+.reveal a { color: var(--orange-accessible); }
+
+/* Logo (fetched from brand.orange.com, never modified) */
+.brand-logo { position: fixed; top: 22px; left: 28px; height: 44px; z-index: 30; }
+.brand-bar { position: fixed; left: 0; right: 0; bottom: 0; height: 10px; background: var(--orange-brand); z-index: 20; }
+
+/* Title & closing slides */
+.reveal .slides section.cover { background: var(--orange-black); color: var(--orange-white); padding: 0 60px; }
+.cover h1 { color: var(--orange-white); font-size: 2.2em; line-height: 1.1; }
+.cover h1 span, .accent { color: var(--orange-brand); }
+.cover .sub { color: var(--orange-grey-light); font-size: .8em; }
+
+.tag { display: inline-block; background: var(--orange-brand); color: var(--orange-black); font-weight: 700; padding: 2px 12px; font-size: .5em; margin-bottom: .8em; }
+.muted { color: var(--orange-grey-dark); font-size: .7em; }
+.big { font-size: 1.45em; font-weight: 700; line-height: 1.25; }
+.big em { color: var(--orange-accessible); font-style: normal; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.cols.three { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card { border: 2px solid var(--orange-black); padding: 14px 20px; font-size: .8em; line-height: 1.5; }
+.card b { color: var(--orange-accessible); }
+.card.dark { background: var(--orange-black); color: var(--orange-white); }
+.card.dark b { color: var(--orange-brand); }
+.impact { background: var(--orange-brand); color: var(--orange-black); padding: 10px 18px; font-size: .75em; margin-top: .9em; font-weight: 700; }
+.phase { border-top: 8px solid var(--orange-brand); padding-top: 8px; font-size: .72em; }
+.phase h3 { font-size: 1.1em; margin: 0 0 .3em; }
+.phase.b { border-color: var(--orange-blue); }
+.phase.g { border-color: var(--orange-green); }
+.reveal .progress { color: var(--orange-brand); }
+.reveal .slide-number { color: var(--orange-grey-dark); background: none; font-family: var(--orange-font); }
+.chart-box { height: 470px; position: relative; }
+
+/* Who / What / Why / How / When overview */
+.w-nav { display: flex; gap: 6px; margin-bottom: .9em; font-size: .5em; font-weight: 700; text-transform: uppercase; }
+.w-nav span { padding: 2px 12px; border: 2px solid var(--orange-grey-light); color: var(--orange-grey-dark); }
+.w-nav span.on { background: var(--orange-brand); border-color: var(--orange-brand); color: var(--orange-black); }
+.cols.four { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.cols.five { grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.cols.four .phase, .cols.five .phase { font-size: .8em; font-weight: 700; }
+.cols.four .phase { font-weight: 400; }
+.phase.p { border-color: var(--orange-purple); }
+.phase.y { border-color: var(--orange-yellow); }

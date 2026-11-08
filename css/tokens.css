@@ -1,0 +1,16 @@
+/* Orange brand tokens — generated from tokens.json. Do not hand-edit hex. */
+:root {
+  --orange-brand: #FF7900;
+  --orange-accessible: #F16E00;
+  --orange-black: #000000;
+  --orange-white: #FFFFFF;
+  --orange-grey-light: #D6D6D6;
+  --orange-grey-mid: #8F8F8F;
+  --orange-grey-dark: #595959;
+  --orange-blue: #4BB4E6;
+  --orange-green: #50BE87;
+  --orange-pink: #FFB4E6;
+  --orange-purple: #A885D8;
+  --orange-yellow: #FFD200;
+  --orange-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

@@ -1,10 +1,73 @@
 /* Additions for the React deck — colours come from ../../css/tokens.css only */
 /* .reveal sizes itself to 100% of its parent: let the React root fill the viewport like <body> does */
-#root { height: 100%; }
-.score { font-size: .55em; font-weight: 400; color: var(--orange-grey-dark); margin-left: .4em; white-space: nowrap; }
-.score b { color: var(--orange-accessible); }
-.axis-list .score { font-size: .8em; }
-.chip { display: inline-block; border: 2px solid var(--orange-brand); padding: 0 8px; margin-left: 4px; font-size: .6em; font-weight: 700; color: var(--orange-black); vertical-align: middle; white-space: nowrap; }
-.card .chip { font-size: .75em; }
-.axis-slide .tag { background: var(--axis-color); }
-.axis-slide .muted { margin: .3em 0 0; }
+#root {
+    height: 100%;
+}
+
+.score {
+    font-size: .55em;
+    font-weight: 400;
+    color: var(--orange-grey-dark);
+    margin-left: .4em;
+    white-space: nowrap;
+}
+
+.score b {
+    color: var(--orange-accessible);
+}
+
+.axis-list .score {
+    font-size: .8em;
+}
+
+.chip {
+    display: inline-block;
+    border: 2px solid var(--orange-brand);
+    padding: 0 8px;
+    margin-left: 4px;
+    font-size: .6em;
+    font-weight: 700;
+    color: var(--orange-black);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.card .chip {
+    font-size: .75em;
+}
+
+.axis-slide .tag {
+    background: var(--axis-color);
+}
+
+.axis-slide .muted {
+    margin: .3em 0 0;
+}
+
+sup {
+    vertical-align: super;
+}
+/* "Why me" pitch slide — black background (keeps the logo legible), orange proof tiles */
+.reveal .slides section.pitch { color: var(--orange-white); }
+.pitch h2 { color: var(--orange-white); font-size: 1.75em; line-height: 1.1; margin-bottom: .7em; }
+.pitch h2 span { color: var(--orange-brand); }
+.proofs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.proof { background: var(--orange-brand); color: var(--orange-black); padding: 18px 20px; font-size: .62em; line-height: 1.4; }
+.proof-value { font-size: 2.9em; font-weight: 700; line-height: 1; }
+.proof-value sup { font-size: .45em; vertical-align: top; line-height: 1; }
+.proof-label { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin: .5em 0 .4em; border-bottom: 2px solid var(--orange-black); padding-bottom: .4em; }
+.proof p { margin: 0; }
+.punchline { font-size: .9em; font-weight: 700; margin-top: 1.1em; border-left: 8px solid var(--orange-brand); padding-left: .6em; }
+
+/* Coloured cards (vision): title highlighted with the axis colour, first item emphasised */
+.card b.highlight {
+    display: inline-block;
+    padding: 2px 10px;
+    background: var(--highlight-color);
+    color: var(--orange-white);
+}
+
+.card li.lead {
+    font-weight: 700;
+    color: var(--orange-brand);
+}

@@ -8,128 +8,93 @@
 // - color: a token from css/tokens.css (brand, blue, green, purple, yellow, pink).
 // Strings may contain inline HTML (<b>, <em>, <u>…).
 
-export const axes = [
-    {
-        id: 'acquisition',
-        label: 'Talent Acquisition',
-        color: 'brand',
-        baseline: 2,
-        outcome: 'faster ramp-up, fresh practices, a balanced seniority pyramid.',
-        actions: [
-            {
-                title: 'AI-native junior pipeline',
-                text: 'Recruit juniors who started their careers with AI tooling; pair each with a senior in a two-way exchange.',
-                flagship: true,
-                impact: {acquisition: 0.5},
-            },
-            {
-                text: 'Redesign buddying as <b>reverse-mentoring</b>: AI workflows ↔ domain &amp; technical knowledge',
-                impact: {acquisition: 0.5},
-            },
-            {
-                text: 'Referral loop: consultants become the first recruiting channel',
-                impact: {acquisition: 0.5},
-            },
-        ],
-    },
-    {
-        id: 'retention',
-        label: 'Talent Retention',
-        color: 'blue',
-        baseline: 2.5,
-        outcome: 'lower attrition, higher engagement, no wasted effort.',
-        actions: [
-            {
-                title: 'Listen, anticipate, grow',
-                text: 'Consultant survey first, then act only on what people really want; regular 1:1s focused on ambitions and a visible growth path.',
-                flagship: true,
-                impact: {retention: 0.5},
-            },
-            {
-                text: 'Know contract terms to <b>anticipate requests</b> (raises, evolutions, mobility) before they become resignations',
-                impact: {retention: 0.5},
-            },
-            {
-                text: 'Unofficial roles for mediors/seniors = ownership and career signal',
-                impact: {retention: 0.5},
-            },
-        ],
-    },
-    {
-        id: 'business',
-        label: 'Business Development',
-        color: 'green',
-        baseline: 2,
-        outcome: 'faster, sharper proposals; better staffing fit; growth aligned with the market.',
-        actions: [
-            {
-                title: 'Faction as a pre-sales asset',
-                text: 'Skill map of the faction, ready for staffing requests, RFIs and RFPs.',
-                flagship: true,
-                impact: {business: 0.5},
-            },
-            {
-                text: "Reusable offer &amp; reference sheets built from consultants' missions",
-                impact: {business: 0.5},
-            },
-            {
-                text: 'Consultants invited into client conversations and solution design',
-                impact: {business: 0.5},
-            },
-            {
-                text: 'Close the loop with sales on pipeline vs. skills to develop',
-                impact: {acquisition: 0.5},
-            },
-        ],
-    },
-    {
-        id: 'operations',
-        label: 'Operational Excellence',
-        color: 'purple',
-        baseline: 2.5,
-        outcome: 'less bench time and overload, my time freed for leadership and delivery.',
-        actions: [
-            {
-                title: 'Workload &amp; staffing cockpit',
-                text: 'Use Faction Lead meetings to balance load and match skills to ambitions; shared view of availability, upcoming ends of mission and ambitions.',
-                flagship: true,
-                impact: {operations: 0.5},
-            },
-            {
-                text: 'Delegate initiatives (ambition follow-up, internal workshops, knowledge manager link) to mediors/seniors',
-                impact: {operations: 0.5},
-            },
-            {
-                text: 'Light rituals: fewer, better follow-ups',
-                impact: {operations: 0.5},
-            },
-        ],
-    },
-    {
-        id: 'expertise',
-        label: 'Faction Expertise',
-        color: 'yellow',
-        baseline: 3,
-        outcome: 'shared technical level, visible expertise, stronger offering.',
-        actions: [
-            {
-                title: 'The learning loop',
-                text: 'Juniors and mediors regularly present a tech or method — 15 minutes, turning into discussion.',
-                flagship: true,
-                impact: {expertise: 0.5},
-            },
-            {
-                text: 'Topics driven by the strategy: Databricks, Snowflake, Terraform, Airflow, K8s, AI-assisted engineering',
-                impact: {expertise: 0.5},
-            },
-            {
-                text: 'Presentation skills grow as a by-product',
-                impact: {retention: 0.5},
-            },
-            {
-                text: 'Field experience fed back into the offering',
-                impact: {expertise: 0.5},
-            },
-        ],
-    },
-];
+export const axes = [{
+    id: 'retention',
+    label: 'Talent Retention',
+    color: 'brand',
+    baseline: 2,
+    outcome: 'lower attrition, higher engagement, no wasted effort.',
+    actions: [{
+        title: 'Listen, anticipate, grow',
+        text: 'Consultant survey first, then act only on what people really want; regular 1:1s focused on ambitions and a visible growth path.',
+        flagship: true,
+        impact: {retention: 1, operations: 0.5},
+    }, {
+        text: 'Unofficial internal roles for better workload repartition, ownership and career signal',
+        impact: {retention: 0.5, operations: 0.5},
+    },],
+}, {
+    id: 'acquisition',
+    label: 'Talent Acquisition',
+    color: 'brand',
+    baseline: 3,
+    outcome: 'fresh practices, a balanced seniority pyramid.',
+    actions: [{
+        title: 'AI-native junior pipeline',
+        text: 'Recruit juniors who started their careers with AI tooling; pair each with a senior in a two-way exchange.',
+        flagship: true,
+        impact: {acquisition: 0.5},
+    },],
+}, {
+    id: 'operations',
+    label: 'Operational Excellence',
+    color: 'blue',
+    baseline: 1,
+    outcome: 'FLs time optimized for leadership and delivery.',
+    actions: [{
+        title: 'Know contracts terms',
+        flagship: true,
+        text: 'To anticipate turnover, change mission requests, etc.',
+        impact: {operations: 0.5},
+    }, {
+        text: 'Use Faction Days to track and share ambitions progress.',
+        impact: {operations: 0.5},
+    },],
+}, {
+    id: 'business',
+    label: 'Business Development',
+    color: 'blue',
+    baseline: 2,
+    outcome: 'Unlock business opportunities, responsibilize consultants.',
+    actions: [{
+        title: 'Faction as a pre-sales asset',
+        text: 'Reconnect with the Tribes, skill map of the faction, RFIs and RFPs.',
+        flagship: true,
+        impact: {business: 0.5},
+    }, {
+        text: 'Watchlist of the Orange offer (Cloud Avenue, Live Intelligence)',
+        impact: {business: 0.5, expertise: 0.5},
+    }, {
+        text: 'Publish a guide to business acquisition', impact: {business: 0.5},
+    },],
+}, {
+    id: 'expertise',
+    label: 'Faction Expertise',
+    color: 'green',
+    baseline: 3,
+    outcome: 'State of the art practices, stronger offering.',
+    actions: [{
+        title: 'Coordinate with the AI adoption squad',
+        flagship: true,
+        text: 'Increase a smart and responsible usage of AI in our delivery and R&amp;D',
+        impact: {expertise: 0.5},
+    },],
+}, {
+    id: 'community',
+    label: 'Community Management',
+    color: 'green',
+    baseline: 2,
+    outcome: 'Sense of belonging, increased satisfaction and self-confidence.',
+    actions: [{
+        title: 'The learning loop',
+        text: 'Juniors and mediors regularly present a tech or method — 15 minutes, turning into discussion.',
+        flagship: true,
+        impact: {community: 0.5},
+    }, {
+        text: 'Status updates on the ambitions at each Faction Day', impact: {community: 0.5},
+    }, {
+        text: 'Narrowed faction monthly meetings, with personal/mission updates', impact: {community: 0.5, retention: 0.5},
+    }, {
+        text: 'Join the OB Thirsty Thursdays', impact: {community: 0.5},
+    },],
+},];

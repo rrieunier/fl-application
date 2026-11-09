@@ -28,7 +28,7 @@ export default function Radar({axes}) {
             options: {
                 maintainAspectRatio: false, animation: false,
                 font: {family: token('--orange-font')},
-                scales: {r: {min: 0, max: MAX_SCORE, ticks: {stepSize: 1, backdropColor: 'transparent'}, pointLabels: {font: {size: 16, weight: 'bold'}}}},
+                scales: {r: {min: 0, max: MAX_SCORE, ticks: {stepSize: 1, backdropColor: 'transparent'}, pointLabels: {font: {size: 16, weight: 'bold'}, color: token('--orange-white'), backdropPadding: {top: 4, bottom: 4, left: 8, right: 8}}}},
                 plugins: {legend: {position: 'bottom', labels: {font: {size: 16}}}},
             },
         });
@@ -38,6 +38,9 @@ export default function Radar({axes}) {
     useEffect(() => {
         const c = chart.current;
         c.data.labels = axes.map((a) => a.label);
+        // each label is highlighted with its axis colour (same style as the vision cards)
+        const colors = axes.map((a) => token(`--orange-${a.color ?? 'brand'}`));
+        c.options.scales.r.pointLabels.backdropColor = (ctx) => colors[ctx.index];
         c.data.datasets[0].data = axes.map((a) => a.baseline);
         c.data.datasets[1].data = axes.map((a) => a.target);
         c.update();

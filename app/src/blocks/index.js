@@ -4,7 +4,8 @@ import Bullets from './Bullets.jsx';
 import Cards from './Cards.jsx';
 import Cover from './Cover.jsx';
 import Phases from './Phases.jsx';
+import Pitch from './Pitch.jsx';
 
 export {default as AxisSlide} from './AxisSlide.jsx';
 
-export const blocks = {cover: Cover, cards: Cards, bullets: Bullets, phases: Phases, axesOverview: AxesOverview};
+export const blocks = {cover: Cover, cards: Cards, bullets: Bullets, phases: Phases, axesOverview: AxesOverview, pitch: Pitch};

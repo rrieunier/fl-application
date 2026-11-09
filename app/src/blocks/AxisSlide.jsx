@@ -34,7 +34,7 @@ export default function AxisSlide({axis, index}) {
             </ul>
             {fromOthers.length > 0 && (
                 <p className="muted">
-                    Also raised by: {fromOthers.map((c, i) => <span key={i}>{i > 0 && ' • '}<Html html={c.action.title ?? c.action.text}/> ({c.from.label}, +{fmt(c.gain)})</span>)}
+                    Also raised by: <ul>{fromOthers.map((c, i) => <li key={i}><Html html={c.action.title ?? c.action.text}/> ({c.from.label}, +{fmt(c.gain)})</li>)}</ul>
                 </p>
             )}
             <div className="impact">Impact: <Html html={axis.outcome}/></div>
